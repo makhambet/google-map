@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../font/SFProDisplay.ttf');
+}
+
+$green: #00BFA5;
+$gray: #99A2AD;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+input, textarea, select, button {
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 28px;
+  color: var(--color-black);
+}
+
+.close {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(224, 224, 224, 0.16);
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+@media (min-width:576px){
+  .container{
+    max-width:540px;
+  }
+}
+@media (min-width:768px){
+  .container{
+    max-width:720px;
+  }
+}
+@media (min-width:992px){
+  .container{
+    max-width:960px;
+  }
+}
+@media (min-width:1200px){
+  .container{
+    max-width:1140px;
+  }
+}
+@media (min-width:1441px){
+  .container{
+    max-width: 1500px;
+  }
+}
+@media (max-width: 490px) {
+  .container {
+    width: 95%;
+  }
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.main-btn {
+  height: 44px;
+  background: $green;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.main-btn-shadow {
+
+}
+
+.main-input {
+  border: 0.5px solid rgba(34, 34, 59, 0.1);
+  border-radius: 10px;
+  height: 44px;
+  transition: border .3s ease-in-out;
+}
+.main-input:focus {
+  border: 0.5px solid $green;
+}
+
+li {
+  list-style: none;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.sign-block {
+  max-height: 90%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 2px rgba(34, 34, 59, 0.13), 0px 2px 20px rgba(34, 34, 59, 0.13);
+  border-radius: 10px;
+  padding: 20px 76px 50px;
+  width: 560px;
+  overflow-x: hidden;
+}
+.sign-block::-webkit-scrollbar {
+  width: 5px;
+}
+.sign-block::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.sign-block::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.sign-block__title {
+  font-size: 1.15em;
+  margin-bottom: 8px;
+}
+.sign-block__info {
+  color: $gray;
+  font-size: 0.75em;
+  margin: 0 0 9%;
+
+  a {
+    color: $green;
+  }
+}
+
+.sign-block__content {
+  position: relative;
+}
+.sign-block__label {
+  font-size: 0.65em;
+  color: $green;
+}
+.sign-block__input {
+  background: rgba(153, 162, 173, 0.1);
+  width: 100%;
+  margin: 8px 0;
+  padding-left: 12px;
+  font-size: 0.75em;
+}
+.sign-block__button {
+  margin-top: 20px;
+  width: 100%;
+  color: #FFF;
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 23px;
+  }
+}
+.signin__forget-password {
+  font-size: 0.6em;
+  color: $green;
+  position: absolute;
+  right: 12px;
+  bottom: 25px;
+}
+.sign-block__attention {
+  margin-top: 2.4em;
+  font-size: 0.65em;
+  font-weight: 500;
+  text-align: center;
+  color: $gray;
+
+  a {
+    color: $green;
+  }
+}
